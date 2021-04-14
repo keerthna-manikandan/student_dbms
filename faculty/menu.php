@@ -1,6 +1,8 @@
 <?php
     include('../conf/constant.php');
     $id=$_GET['id'];
+    $cname=$_GET['source'];
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,27 +33,20 @@
                             <div class="dropdown">
                                 <ul>
                                     <li class="dropdown-link">
-                                        <a href='marks.php?id=$id'>Marks</a>
+                                        <a href=<?php echo SURL."faculty/marks.php?id=$id&source=$cname"?>>Marks</a>
                                     </li>
-                                    <li class="dropdown-link">
-                                        <a href="attendence.php?id=$id">Attendence</a>
-                                    </li>
+
+
                                     <div class="arrow"></div>
                                 </ul>
                             </div>
-                        </li>
-                        <li class="nav-link" style="--i: .6s">
-                            <a href="list.php?id=$id">List</a>
-                        </li>
-                        <li class="nav-link" style="--i: 1.1s">
-                            <a href="modify.php?id=$id">Modify</a>
-                            
+                        </li>                       
+                        
+                        <li class="nav-link" style="--i: 1.35s">
+                            <a href=<?php echo SURL."faculty/search.php?id=$id&source=$cname"?>>Search</a>
                         </li>
                         <li class="nav-link" style="--i: 1.35s">
-                            <a href="search.php?id=$id">Search</a>
-                        </li>
-                        <li class="nav-link" style="--i: 1.35s">
-                            <a href="calender.php?id=$id">Calender</a>
+                            <a href=<?php echo SURL."faculty/calender.php?id=$id&source=$cname"?>>Calender</a>
                         </li>
                     </ul>
                 </div>
@@ -72,11 +67,4 @@
             </div>
         </div>
     </header>
-    <main>
-        <section>
-            <div class="overlay"></div>
-        </section>
-    </main>
-</body>
-
-</html>
+  
