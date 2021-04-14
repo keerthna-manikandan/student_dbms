@@ -1,5 +1,6 @@
 <?php
     $id = $_GET['id'];
+    $c=$_GET['source'];
     include('../conf/constant.php');
 ?>
 <!DOCTYPE html>
@@ -31,20 +32,20 @@
                             <div class="dropdown">
                                 <ul>
                                     <li class="dropdown-link">
-                                        <a href="#">Marks</a>
+                                        <a href=<?php echo SURL."student/marks.php?id=$id&source=$c";?>>Marks</a>
                                     </li>
                                     <li class="dropdown-link">
-                                        <a href="#">Faculty</a>
+                                        <a href=<?php echo SURL."student/Faculty.php?id=$id&source=$c";?>>Faculty</a>
                                     </li>
                                     <div class="arrow"></div>
                                 </ul>
                             </div>
                         </li>
                         <li class="nav-link" style="--i: 1.35s">
-                            <a href="#">Profile</a>
+                            <a href=<?php echo SURL."student/profile.php?id=$id&source=$c";?>>Profile</a>
                         </li>
                         <li class="nav-link" style="--i: 1.35s">
-                            <a href="#">Calender</a>
+                            <a href=<?php echo SURL."student/calender.php?id=$id&source=$c";?>>Calender</a>
                         </li>
                     </ul>
                 </div>
@@ -65,11 +66,3 @@
             </div>
         </div>
     </header>
-    <main>
-        <section>
-            <div class="overlay"></div>
-        </section>
-    </main>
-</body>
-
-</html>
